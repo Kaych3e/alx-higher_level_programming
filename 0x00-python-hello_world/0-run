@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+#python shell script
+
+#creating variables
+a = "Hello "
+b = "World!"
+print(a + b)
