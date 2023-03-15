@@ -1,4 +1,4 @@
--- Creates a database and table in the database
+-- Creates a database 'hbtn_0d_usa' and table 'states' in the database
 -- id INT unique, auto generated, cant be null and is a primary key
 -- name VARCHAR(256) cant be null
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
