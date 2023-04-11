@@ -8,6 +8,8 @@ const arg2 = args[1];
 
 if (arg1 && arg2) {
   console.log(`${arg1} is ${arg2}`);
+} else if (arg2 === 0) {
+  console.log(`${arg1} is undefined`);
 } else {
-  console.log('undefined');
+  console.log('undefined is undefined');
 }
