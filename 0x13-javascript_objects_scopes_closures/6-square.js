@@ -5,14 +5,10 @@ class Square extends require('./5-square.js') {
     if (c === undefined) {
       c = 'X';
     }
-    let squareString = '';
+
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        squareString += c;
-      }
-      squareString += '\n';
+      console.log(c.repeat(this.width));
     }
-    console.log(squareString);
   }
 }
 
