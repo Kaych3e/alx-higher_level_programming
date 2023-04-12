@@ -2,7 +2,7 @@
 
 class Rectangle {
   constructor (w, h) {
-    if (w <= 0 || h <= 0 || !Number.isInteger(w) || !Number.isInteger(h)) {
+    if (w <= 0 || h <= 0) {
       return {};
     }
 
@@ -19,7 +19,7 @@ class Rectangle {
     for (let i = 0; i < this.width; i++) {
       row += 'X';
     }
-    for (let j = 0; j < this.height; j++) {
+    for (let i = 0; i < this.height; i++) {
       console.log(row);
     }
   }
