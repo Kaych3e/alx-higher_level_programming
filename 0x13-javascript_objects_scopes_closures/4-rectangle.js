@@ -10,19 +10,13 @@ class Rectangle {
   // creates instance method print() to print the rectangle with X
   print () {
     for (let i = 0; i < this.height; i++) {
-      let row = '';
-      for (let j = 0; j < this.width; j++) {
-        row += 'X';
-      }
-      console.log(row);
+      console.log('X'.repeat(this.width));
     }
   }
 
   // creates instance method rotate() and double()
   rotate () {
-    const temp = this.width;
-    this.width = this.height;
-    this.height = temp;
+    [this.width, this.height] = [this.height, this.width];
   }
 
   double () {
