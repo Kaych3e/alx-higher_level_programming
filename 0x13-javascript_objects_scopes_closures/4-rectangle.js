@@ -11,18 +11,20 @@ class Rectangle {
 
   // creates instance method print() to print the rectangle with X
   print () {
-    let row = '';
-    for (let i = 0; i < this.width; i++) {
-      row += 'X';
-      for (let j = 0; j < this.height; j++) {
-        console.log(row);
+    for (let i = 0; i < this.height; i++) {
+      let row = '';
+      for (let j = 0; j < this.width; j++) {
+        row += 'X';
       }
+      console.log(row);
     }
   }
 
   // creates instance method rotate() and double()
   rotate () {
-    [this.width, this.height] = [this.height, this.width];
+    const temp = this.width;
+    this.width = this.height;
+    this.height = temp;
   }
 
   double () {
