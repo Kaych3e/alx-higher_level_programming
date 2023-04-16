@@ -9,13 +9,13 @@ if __name__ == '__main__':
     """ Connect to MySQL server and create cursor object"""
     db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
-    cursor = db.cursor()
+    cur = db.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%',
-		    ORDER BY id ASC")
-    data = cursor.fetchall()
+    cur.execute("SELECT * FROM states ORDER BY `id`")
+    data = cur.fetchall()
     for row in data:
+    if row[1][0] == "N"
         print(row)
 
-    cursor.close()
+    cur.close()
     db.close()
