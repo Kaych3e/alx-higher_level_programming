@@ -6,7 +6,7 @@ State class inherits from Base tips, links to MySQL table states
 """
 
 from sqlalchemy import Column, Integer, String
-from SQLAlchemy.ext.declarative import declarative_base
+from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
