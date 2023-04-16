@@ -11,14 +11,14 @@ if __name__ == '__main__':
                         passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
 
 """ Create cursor object and Execute SQL query to select all states"""
-    our = db.cursor()
-    our.execute("SELECT * FROM states ORDER BY states.id")
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM states ORDER BY states.id")
 
 """ print all rows"""
-    data = our.fectchall()
+    data = cursor.fectchall()
     for row in data:
         print(row)
 
 """ Close cursor and database connections"""
-our.close()
-db.close()
+    cursor.close()
+    db.close()
