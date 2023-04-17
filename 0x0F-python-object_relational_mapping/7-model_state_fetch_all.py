@@ -7,13 +7,13 @@ from model_state import Base, State
 
 """Create engine and session, query all states and print"""
 engine = create_engine("mysql+mysqldb://{}:{}@localhost{}"
-	.format(sys.argv[1], sys.argv[2], sys.argv[3]))
+                       .format(sys.argv[1], sys.argv[2], sys.argv[3]))
 
-    Session = sessionmaker(bind=engine)
-    session = Session()
+Session = sessionmaker(bind=engine)
+session = Session()
 
-    states = session.query(State).order_by(State.id).all()
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+states = session.query(State).order_by(State.id).all()
+for state in states:
+    print("{}: {}".format(state.id, state.name))
 
-    session.close()
+session.close()

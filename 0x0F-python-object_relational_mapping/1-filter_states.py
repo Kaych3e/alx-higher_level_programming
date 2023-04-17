@@ -14,8 +14,8 @@ if __name__ == '__main__':
     cur.execute("SELECT * FROM states ORDER BY `id`")
     data = cur.fetchall()
     for row in data:
-    if row[1][0] == "N"
-        print(row)
+        if row[1][0] == "N"
+print(row)
 
-    cur.close()
-    db.close()
+cur.close()
+db.close()

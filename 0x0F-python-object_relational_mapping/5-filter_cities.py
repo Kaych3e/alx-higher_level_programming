@@ -10,14 +10,14 @@ if __name__ == '__main__':
     cur = db.cursor()
     query = " ".join([
         "SELECT cities.name FROM cities",
-       	"INNER JOIN states ON states.id = cities.state_id",
-	"WHERE states.name LIKE BINARY '{}'",
+        "INNER JOIN states ON states.id = cities.state_id",
+        "WHERE states.name LIKE BINARY '{}'",
         "ORDER BY cities.id",
     ]).format(sys.argv[4])
     cur.execute(query)
     data = cur.fetchall()
     strdata = ', '.join([i[0] for i in data])
-        print(strdata)
+print(strdata)
 
-    cur.close()
-    db.close()
+cur.close()
+db.close()

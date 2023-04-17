@@ -8,9 +8,9 @@ if __name__ == '__main__':
                          passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cursor = db.cursor()
     query = " ".join([
-    "SELECT cities.id, cities.name, states.name FROM cities",
-    "INNER JOIN states ON states.id = cities.state_id",
-    "ORDER BY cities.id"])
+            "SELECT cities.id, cities.name, states.name FROM cities",
+            "INNER JOIN states ON states.id = cities.state_id",
+            "ORDER BY cities.id"])
     cursor.execute(query)
 
     data = cursor.fetchall()
