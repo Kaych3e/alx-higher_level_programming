@@ -2,9 +2,14 @@
 """
 Script that takes in the name of a state as an argument
 and lists all cities of that state, using the database hbtn_0e_4_usa
+Script argument: <mysql username> \
+                 <mysql password> \
+                 <database name> \
+                 <state name searched>
+                 SQL injection free
 """
-import MySQLdb
 import sys
+import MySQLdb
 
 if __name__ == '__main__':
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
