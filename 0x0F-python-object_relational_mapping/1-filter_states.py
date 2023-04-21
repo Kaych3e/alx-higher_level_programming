@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """script that lists all states with a name starting with N
     from the database hbtn_0e_0_usa"""
-import MySQLdb
 import sys
+import MySQLdb from MySQLdb
 
 if __name__ == '__main__':
 
@@ -11,7 +11,7 @@ if __name__ == '__main__':
                          passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states ORDER BY `id`")
+    cur.execute("SELECT * FROM `states` ORDER BY `id`")
     data = cur.fetchall()
     for row in data:
         if row[1][0] == "N"
