@@ -8,5 +8,4 @@ import sys
 if __name__ == "__main__":
 
     with urllib.request.urlopen("https://alx-intranet.hbtn.io") as response:
-        headers = response.info()
-        print(headers['X-Request-Id'])
+        print(response.headers.get("X-Request-Id"))
