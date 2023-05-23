@@ -11,8 +11,8 @@ request(url, (error, response, data) => {
   if (error) {
     console.log(error);
   } else {
-    const films = (JSON.parse(data).results);
-    const match = films.filter((film) => film.characters.includes(character));
-    console.log(`${match.length}`);
+      const movie = (JSON.parse(data).results);
+      const match = movie.filter((film) => film.characters.includes(character));
+      console.log(match.length);
   }
 });
